@@ -16,17 +16,17 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale: "en-US"
-title: "Moon-Ga's Tech Blog"
+title: "Moon-Ga"
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
-name: "Moon-Ga"
+name: "Jaeseok Moon(Moon-Ga)"
 description: "Code is not made on its own."
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: "https://mganom.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "MGanom/mganom.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title: # overrides the website title displayed in the masthead, use " " for no title
+masthead_title: "문가네 개발 블로그" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
 comments:
@@ -101,15 +101,16 @@ analytics:
 
 # Site Author
 author:
-  name: "Moon-Ga"
+  name: "Jaeseok Moon"
   avatar: "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  nickname: "Moon-Ga"
   bio: "Code cannot be made itself."
-  location: "Seoul, Korea"
-  email:
+  location: "Seoul, Republic of Korea"
+  email: "chewy111@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "chewy111@naver.com"
+      # url: "chewy111@naver.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -212,7 +213,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
 plugins:
@@ -265,6 +266,21 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+  recipes:
+    output: true
+    permalink: /:collection/:path/
+  pets:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
 # Defaults
 defaults:
   # _posts
@@ -273,16 +289,33 @@ defaults:
       type: posts
     values:
       layout: single
-      show_data: true
+      show_date: true
       author_profile: true
-      # read_time: true
+      read_time: # true
       comments: # true
-      share: true
+      share: # true
       related: true
+      toc: true
+      toc_sticky: true
+      sidebar:
+        nav: "docs"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      sidebar:
+        nav: "docs"
   # _docs
   - scope:
       path: ""
-      type: posts
+      type: docs
     values:
+      layout: single
+      show_date: true
+      author_profile: true
       sidebar:
         nav: "docs"
