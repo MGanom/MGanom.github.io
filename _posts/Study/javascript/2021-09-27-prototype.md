@@ -1,5 +1,5 @@
 ---
-title: "Prototype(프로토타입)"
+title: "[JavaScript] Prototype(프로토타입)"
 categories: JavaScript
 ---
 

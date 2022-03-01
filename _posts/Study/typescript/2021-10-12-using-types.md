@@ -1,5 +1,5 @@
 ---
-title: "Using Types(타입 사용하기)"
+title: "[TypeScript] Using Types(타입 사용하기)"
 categories: TypeScript
 ---
 

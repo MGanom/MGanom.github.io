@@ -1,5 +1,5 @@
 ---
-title: "Union & Intersection Type(유니온 & 인터섹션 타입)"
+title: "[TypeScript] Union & Intersection Type(유니온 & 인터섹션 타입)"
 categories: TypeScript
 ---
 

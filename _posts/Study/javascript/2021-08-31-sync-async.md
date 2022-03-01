@@ -1,5 +1,5 @@
 ---
-title: "Sync & Async(동기 & 비동기)"
+title: "[JavaScript] Sync & Async(동기 & 비동기)"
 categories: JavaScript
 ---
 

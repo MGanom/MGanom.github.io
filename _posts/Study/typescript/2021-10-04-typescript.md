@@ -1,5 +1,5 @@
 ---
-title: "TypeScript(타입스크립트)"
+title: "[TypeScript] TypeScript(타입스크립트)"
 categories: TypeScript
 ---
 
