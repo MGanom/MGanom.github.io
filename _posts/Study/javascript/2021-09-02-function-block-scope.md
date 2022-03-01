@@ -1,5 +1,5 @@
 ---
-title: "Function Scope & Block Scope(함수 스코프 & 블록 스코프)"
+title: "[JavaScript] Function Scope & Block Scope(함수 스코프 & 블록 스코프)"
 categories: JavaScript
 ---
 

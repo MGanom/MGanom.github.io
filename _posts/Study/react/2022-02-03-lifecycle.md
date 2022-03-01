@@ -1,5 +1,5 @@
 ---
-title: "Lifecycle (생명주기)"
+title: "[React] Lifecycle (생명주기)"
 categories: React
 ---
 

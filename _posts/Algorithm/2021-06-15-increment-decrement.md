@@ -1,5 +1,5 @@
 ---
-title: "Increment & Decrement Operator(증감 연산자)"
+title: "[Algorithm] Increment & Decrement Operator(증감 연산자)"
 categories: Algorithm
 ---
 

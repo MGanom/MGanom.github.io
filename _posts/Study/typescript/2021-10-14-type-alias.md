@@ -1,5 +1,5 @@
 ---
-title: "Type Alias(타입 앨리어스)"
+title: "[TypeScript] Type Alias(타입 앨리어스)"
 categories: TypeScript
 ---
 

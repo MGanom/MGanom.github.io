@@ -1,5 +1,5 @@
 ---
-title: "Virtual DOM(가상 DOM)"
+title: "[React] Virtual DOM(가상 DOM)"
 categories: React
 ---
 
