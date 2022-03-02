@@ -30,3 +30,5 @@ docs:
         url: /categories/typescript
       - title: "Algorithm"
         url: /categories/algorithm
+      - title: "Others"
+        url: /categories/others
