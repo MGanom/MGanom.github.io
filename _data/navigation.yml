@@ -22,12 +22,16 @@ docs:
         url: /categories
       - title: "Concept"
         url: /categories/concept
+      - title: "CSS"
+        url: /categories/css
       - title: "JavaScript"
         url: /categories/javascript
       - title: "React"
         url: /categories/react
       - title: "TypeScript"
         url: /categories/typescript
+      - title: "Node.js"
+        url: /categories/node-js
       - title: "Algorithm"
         url: /categories/algorithm
       - title: "Others"
