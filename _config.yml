@@ -21,9 +21,9 @@ title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "Jaeseok Moon(Moon-Ga)"
 description: "Code is not made on its own."
-url: "https://mganom.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: "https://moon-ga.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: "MGanom/mganom.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "Moon-Ga/moon-ga.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: "문가네 개발 블로그" # overrides the website title displayed in the masthead, use " " for no title
@@ -122,7 +122,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/MGanom"
+      url: "https://github.com/Moon-Ga"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -138,7 +138,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/MGanom"
+      url: "https://github.com/Moon-Ga"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
