@@ -3,7 +3,7 @@ title: "[React] Virtual DOM(가상 DOM)"
 categories: React
 ---
 
-※ 가상 DOM을 이해하기 위해선 우선 [DOM](https://github.com/Moon-Ga/Studying/blob/main/JavaScript/DOM.md)에 대해 알아야 한다.
+※ 가상 DOM을 이해하기 위해선 우선 [DOM](https://moon-ga.github.io/html/dom/){:target="\_blank"}에 대해 알아야 한다.
 
 ## Virtual DOM (가상 DOM)이란?
 
