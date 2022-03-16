@@ -22,6 +22,8 @@ docs:
         url: /categories
       - title: "Concept"
         url: /categories/concept
+      - title: "HTML"
+        url: /categories/html
       - title: "CSS"
         url: /categories/css
       - title: "JavaScript"
