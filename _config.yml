@@ -104,9 +104,9 @@ author:
   name: "Jaeseok Moon"
   avatar: "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   nickname: "Moon-Ga"
-  bio: "Code cannot be made itself."
+  bio: "Code cannot be made itself"
   location: "Seoul, Republic of Korea"
-  email: "chewy111@naver.com"
+  email: "dev.jaeseok@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
