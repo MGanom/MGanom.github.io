@@ -54,7 +54,7 @@
   @include clearfix();
   float: left;
   margin-top: 1em;
-  padding-top: 1em;
+  padding-top: 0.5em;
   width: 100%;
 
   ul {
@@ -160,7 +160,7 @@
 .page__share + .pagination,
 .page__comments + .pagination {
   margin-top: 2em;
-  padding-top: 2em;
+  padding-top: 0.5em;
   border-top: 1px solid $border-color;
 }
 
@@ -340,8 +340,7 @@
      ========================================================================== */
 
 .nav__list {
-  margin-bottom: 1.5em;
-
+  margin-top: 0 !important;
   input[type="checkbox"],
   label {
     display: none;
@@ -357,7 +356,7 @@
       font-weight: bold;
       border: 1px solid $light-gray;
       border-radius: $border-radius;
-      z-index: 20;
+      // z-index: 20;
       -webkit-transition: 0.2s ease-out;
       transition: 0.2s ease-out;
       cursor: pointer;
