@@ -30,6 +30,8 @@ docs:
         url: /categories/javascript
       - title: "React"
         url: /categories/react
+      - title: "Next.js"
+        url: /categories/next-js
       - title: "TypeScript"
         url: /categories/typescript
       - title: "Node.js"
