@@ -77,4 +77,3 @@ Next.js는 Built-in CSS Support가 존재한다. 즉, 처음부터 내장되어 
 참고로, CSS는 JavaScript가 비활성화 되어 있어도 적용된다.
 
 참고: [Next.js 공식문서](https://nextjs.org/docs){:target="\_blank"}
-참고: [Nomad Coders](https://nomadcoders.co/){:target="\_blank"}

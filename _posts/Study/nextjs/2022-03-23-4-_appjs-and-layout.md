@@ -127,4 +127,3 @@ export default function App({ Component, pageProps }) {
 이런식으로 `<Layout>` 컴포넌트로 감싸주면 모든 페이지에서 `Layout.js`에 적어준 코드가 적용되는 것을 확인할 수 있다.
 
 참고: [Next.js 공식문서](https://nextjs.org/docs){:target="\_blank"}
-참고: [Nomad Coders](https://nomadcoders.co/){:target="\_blank"}

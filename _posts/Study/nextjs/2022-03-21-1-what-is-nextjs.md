@@ -36,5 +36,4 @@ $ yarn create next-app
 
 터미널에 이렇게 입력해주고 이후 프로젝트 이름까지 입력해주면 프로젝트가 생성된다. 만약 커맨드 뒤에 한 칸 띄우고 `--typescript`를 입력하면 타입스크립트용 프로젝트가 생성된다.
 
-참고: [Next.js 공식문서](https://nextjs.org/docs){:target="\_blank"}  
- 참고: [Nomad Coders](https://nomadcoders.co/){:target="\_blank"}
+참고: [Next.js 공식문서](https://nextjs.org/docs){:target="\_blank"}
