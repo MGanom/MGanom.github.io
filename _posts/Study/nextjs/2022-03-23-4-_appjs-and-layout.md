@@ -28,7 +28,7 @@ categories: Next.js
 
 이렇게 `pages`폴더에 추가해주면 된다.
 
-```js
+```jsx
 // _app.js
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
 
 이것이 `_app.js`의 기본 형태이다. `props`로 `Component`와 `pageProps`를 받으며 이를 반환한다. `Component` 프롭스는 페이지들 중 현재 선택된 페이지이며, `pageProps`는 기본적으로는 빈 객체이지만 만약 페이지 컴포넌트에 프롭스를 전달했다면 그 프롭스를 의미한다.
 
-```js
+```jsx
 // _app.js
 import NavBar from "../components/NavBar";
 
@@ -88,7 +88,7 @@ export default function App({ Component, pageProps }) {
 
 우선 `Layout.js`를 만들어 준다.
 
-```js
+```jsx
 // Layout.js
 import NavBar from "./NavBar";
 
@@ -104,7 +104,7 @@ export default function Layout({ children }) {
 
 여기에서 프롭스인 `children`은 `Layout` 컴포넌트가 감싸고 있는 다른 컴포넌트를 의미한다.
 
-```js
+```jsx
 // _app.js
 import Layout from "../components/Layout";
 

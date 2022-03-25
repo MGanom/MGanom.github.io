@@ -77,6 +77,7 @@ export default function NavBar() {
 ```
 
 참고로 `<Link>` 컴포넌트에는 `className`이나 `styles` 등의 프롭스를 전달할 수 없기 때문에 만약 스타일링을 하고 싶다면 컴포넌트 내부의 `<a>` 태그 등을 활용해야 한다.
-참고로 `<Link>` 컴포넌트에는 `className`이나 `styles` 등의 프롭스를 전달할 수 없기 때문에 만약 스타일링을 하고 싶다면 컴포넌트 내부의 `<a>` 태그 등을 활용해야 한다.
+
+이 방법 외에도 `next/router`의 `useRouter()`를 사용하여 라우팅하는 방법도 있는데, 이에 대해서는 추후에 작성할 글에서 다루도록 하겠다.
 
 참고: [Next.js 공식문서](https://nextjs.org/docs){:target="\_blank"}
