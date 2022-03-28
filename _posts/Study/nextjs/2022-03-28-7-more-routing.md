@@ -53,14 +53,14 @@ export default function Details({ movie }) {
 import Link from "next/link";
 
 export default function Details({ movie }) {
+  const urlObject = {
+    pathname: "/about/[id]",
+    query: { id: movie.id, name: movie.name },
+  };
+
   return (
     <div>
-      <Link
-        href={{
-          pathname: "/about/[id]",
-          query: { id: movie.id, name: movie.name },
-        }}
-      >
+      <Link href={urlObject}>
         <a>About</a>
       </Link>
     </div>
@@ -105,4 +105,5 @@ export default function MovieDetail() {
 ```
 
 처럼 코드를 작성하여 화면에 영화의 아이디와 이름을 출력할 수 있는 것이다.
+
 참고: [Next.js 공식문서](https://nextjs.org/docs){:target="\_blank"}
