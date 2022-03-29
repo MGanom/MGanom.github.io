@@ -26,6 +26,8 @@ docs:
         url: /categories/html
       - title: "CSS"
         url: /categories/css
+      - title: "Tailwind CSS"
+        url: /categories/tailwind-css
       - title: "JavaScript"
         url: /categories/javascript
       - title: "React"
