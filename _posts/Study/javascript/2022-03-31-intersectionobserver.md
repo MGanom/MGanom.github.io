@@ -34,7 +34,40 @@ const observer = new IntersectionObserver(/*callback*/, /*option*/);
 const onIntersect = (entries, observer) => console.log("Intersected!");
 ```
 
-관찰자가 어떠한 `target`의 관찰을 시작하거나, 혹은 관찰하는 `target`의 교차 상태가 변했을 때 호출 될 콜백 함수이다.
+관찰자가 어떠한 `target`의 관찰을 시작하거나, 혹은 관찰하는 `target`의 교차 상태가 변했을 때 호출 될 콜백 함수이다.  
+이 콜백 함수는 `entries`와 `observer`가 인자로 전달된다. `entries`는 교차 상태가 변화한 `target`들의 배열이고 `observer`는 이 콜백 함수를 호출한 `IntersectionObserver`를 의미한다.
+
+#### entries
+
+`entries`에는 교차 상태가 변화한 `target`들이 배열로 들어오는데, 이 배열의 `target`들에는 현재 상태에 대한 속성들이 존재한다.
+
+##### boundingClientRect
+
+`target` 요소의 크기와 요소의 테두리 위치를 나타낸다.
+
+##### intersectionRatio
+
+`target` 요소가 `root` 요소와 교차하고 있는 비율을 0.0부터 1.0의 숫자로 나타낸다.
+
+##### intersectionRect
+
+`target` 요소가 화면에 보여지고 있는 크기와 요소의 테두리 위치를 나타낸다.
+
+##### isIntersecting
+
+`target` 요소가 교차하고 있는지를 boolean으로 나타낸다.
+
+##### rootBounds
+
+`root` 요소의 크기와 요소의 테두리 위치를 나타낸다.
+
+##### target
+
+`target` 요소를 나타낸다.
+
+##### time
+
+문서의 생성 시간을 기준으로 교차 상태가 변화한 시간을 나타낸다.
 
 #### option
 
@@ -51,18 +84,30 @@ const options = {
 `rootMargin`은 `root`가 가질 margin 값으로, `root`의 측면마다 경계의 크기를 조절할 수 있다. 기본값은 0이다.  
 `threshold`는 관찰자가 `root`와 `target` 간의 교차가 이루어졌다고 판단하는 기준으로써, 만약 `0.3`으로 설정해준다면 `target`요소가 `root`에서 30%만큼 보였을 때 교차가 이루어졌다고 판단한다. 기본값은 0이다.
 
-### observe, disconnect, unobserve, takeRecords
+#### IntersectionObserver의 메서드
 
-#### observe
+##### observe
 
 ```js
 observer.observe(target);
 ```
 
-#### disconnect
+관찰자가 `target`의 관찰을 시작한다.
+
+##### unobserve
 
 ```js
-observer.disconnect(target);
+observer.unobserve(target);
 ```
+
+관찰자가 `target`의 관찰을 중단한다.
+
+##### disconnect
+
+```js
+observer.disconnect();
+```
+
+관찰자가 모든 관찰을 중단한다.
 
 참고: [MDN - Intersection Observer API](https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API){:target="\_blank"}
