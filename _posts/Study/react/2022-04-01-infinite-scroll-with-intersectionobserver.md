@@ -17,15 +17,18 @@ categories: React
 
    ```jsx
    const [target, setTarget] = useState(null);
+   const targetStyle = { width: "100%", height: "200px" };
 
    return (
      <div>
-       <div ref={setTarget}>This is Target.</div>
+       <div ref={setTarget} style={targetStyle}>
+         This is Target.
+       </div>
      </div>
    );
    ```
 
-   HTML이 생성되고 그 요소들 중 하나가 교차 상태를 판별할 대상인 `target`이 돼야 하므로 `ref`와 `useState`를 활용하여 `target`을 지정해 줬다.
+   HTML이 생성되고 그 요소들 중 하나가 교차 상태를 판별할 대상인 `target`이 돼야 하므로 `ref`와 `useState`를 활용하여 `target`을 지정해 줬다. 또한 요소에 크기를 정해줌으로써 교차 상태를 판별하기 쉽게 해줬다.
 
 2. `observer` 생성
 
@@ -36,7 +39,7 @@ categories: React
        observer = new IntersectionObserver();
        observer.observe(target);
      }
-   }, []);
+   }, [target]);
    ```
 
    컴포넌트가 렌더가 완료됨에 따라 `observer`가 생성되어야 하므로 `useEffect`를 활용해야 한다. 또한 `target`이 생성되기 전에 `observe`를 시작할 수 없으므로 조건문을 넣어줬다.
@@ -58,6 +61,7 @@ categories: React
 4. 데이터 페칭 함수 생성
 
    ```jsx
+   const page = 1;
    const fetchData = async () => {
      const response = await fetch(`/api/db/${page}`);
      const data = await response.json();
@@ -66,9 +70,45 @@ categories: React
    };
    ```
 
-참고: [문가네 개발 블로그 - Intersection Observer API란?](https://moon-ga.github.io/javascript/intersectionobserver/){:target="\_blank"}
+   async&await을 사용하여 api로부터 데이터를 페칭해오는 함수이다. fetch가 이루어질 때마다 page가 1씩 더해져 다음 fetch 때 다음 페이지의 데이터가 페칭되고, 그 데이터를 이전 `movies` state에 concat으로 합쳐줌으로써 `movies` 배열이 업데이트되고, 그에 따라 렌더가 다시 이루어져 화면에 나타나게 된다.
+
+5. 최종 코드
+
+```jsx
+const [movies, setMovies] = useState([]); // 추가된 부분
+const [target, setTarget] = useState(null);
+const page = 1;
+
+const fetchData = async () => {
+  const response = await fetch(`/api/db/${page}`);
+  const data = await response.json();
+  setMovies((prev) => prev.concat(data.results));
+  page++;
+};
+
+// 추가된 부분
+useEffect(() => {
+  fetchData();
+}, []);
+
+useEffect(() => {
+  let observer;
+  if (target) {
+    const onIntersect = async ([entry], observer) => {
+      if (entry.isIntersecting) {
+        observer.unobserve(entry.target);
+        await fetchData();
+        observer.observe(entry.target);
+      }
+    };
+    observer = new IntersectionObserver(onIntersect, { threshold: 1 }); // 추가된 부분
+    observer.observe(target);
+  }
+  return () => observer && observer.disconnect();
+}, [target]);
+```
+
+데이터를 담아줄 state를 생성하고, 초기값은 빈 배열로 설정해줬다. 또한 첫 렌더 때 첫 페칭이 이루어져야 하므로 `useEffect`로 첫 데이터를 호출해왔다. `IntersectionObserver()`에 `onIntersect`를 콜백함수로 전달해주고, `options`로는 `{threshold: 1}`을 전달해줌으로써 관찰하고 있는 대상이 화면에 완전히 보여야 `onIntersect`가 실행되도록 했다. 또한 `useEffect`의 `return`에 `disconnect()`를 넣어줬는데, 그 이유는 데이터 페칭이 완료되고 나면 업데이트 로직이 끝나기 때문에 clean-up을 통해 observer의 관찰을 일시정지하고 버그를 방지하기 위함이다.
+
+참고: [문가네 개발 블로그 - Intersection Observer API란?](https://moon-ga.github.io/javascript/intersectionobserver/){:target="\_blank"}  
 참고: [MDN - Intersection Observer API](https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API){:target="\_blank"}
-
-```
-
-```

@@ -11,7 +11,7 @@ Next.js는 Built-in CSS Support가 존재한다. 즉, 처음부터 내장되어 
 
    전역으로 적용되는 스타일시트를 추가하려면 `pages/_app.js`와 `styles.css`를 만들어 적용해주면 된다.
 
-   ```js
+   ```jsx
    // pages/_app.js
    import "../styles.css";
 
@@ -47,7 +47,7 @@ Next.js는 Built-in CSS Support가 존재한다. 즉, 처음부터 내장되어 
 
    우선 이렇게 css 파일을 만들어준다.
 
-   ```js
+   ```jsx
    import Link from "next/link";
    import styles from "./NavBar.module.css";
 
