@@ -23,7 +23,7 @@ React에서는 페이지를 이동하기 위해선 React-Router-DOM 등을 함�
 
 이렇게 `pages` 폴더에 파일을 생성하면 그 파일의 이름이 곧 그 파일의 주소가 된다.
 
-```js
+```jsx
 // index.js
 export default function Home() {
   return <h1>THIS IS HOME</h1>;
@@ -32,7 +32,7 @@ export default function Home() {
 
 단, `index.js`는 자동적으로 메인 화면으로 인식되어 주소가 `'/'`로 생성된다.
 
-```js
+```jsx
 // about.js
 export default function About() {
   return <h1>THIS IS ABOUT</h1>;
@@ -47,7 +47,7 @@ export default function About() {
 
 Next.js에선 페이지 간 이동을 할 때 단순히 `<a>`태그만 사용하면 안된다. 왜냐하면 `<a>`태그만 사용하게 될 경우 새로고침이 일어나면서 페이지 전체가 다시 로드 되기 때문에 페이지 전환 속도가 느려질 뿐만 아니라 Next.js의 CSR, SSR 기능을 제대로 활용하지 못하기 때문이다. 그렇기에 반드시 `<Link>` 컴포넌트를 사용해야 한다.
 
-```js
+```jsx
 // NavBar.js
 // bad
 export default function NavBar() {
