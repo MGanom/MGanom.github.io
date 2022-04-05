@@ -1,6 +1,7 @@
 ---
 title: "[JavaScript] Intersection Observer API"
 categories: JavaScript
+last_modified_at: 2022-04-01
 ---
 
 ## Intersection Observer API란?
