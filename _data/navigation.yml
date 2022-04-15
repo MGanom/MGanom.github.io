@@ -38,6 +38,8 @@ docs:
         url: /categories/typescript
       - title: "Node.js"
         url: /categories/node-js
+      - title: "GraphQL"
+        url: /categories/graphql
       - title: "Algorithm"
         url: /categories/algorithm
       - title: "Others"
