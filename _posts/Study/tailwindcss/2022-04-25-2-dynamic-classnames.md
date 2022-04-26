@@ -1,7 +1,7 @@
 ---
 title: "[Tailwind CSS] Tailwind CSS의 작동 방식과 동적 스타일링 작성 방법 - (2)"
 categories: Tailwind_CSS
-last_modified_at: 2022-04-07
+last_modified_at: 2022-04-26
 ---
 
 ## Tailwind CSS의 작동 방식
@@ -57,6 +57,57 @@ if (isImporant) {
 
 이렇게 하면 h1 태그에 CSS가 적용되게 된다.
 
-### 3.
+### 3. 변수 및 함수 활용하기
+
+```jsx
+// Script
+const colors = {
+  red: "text-red-600",
+  black: "text-black",
+};
+
+const textSizes = {
+  sm: "text-sm",
+  md: "text-md",
+  lg: "text-lg",
+};
+
+const coloredText = (color, size) => {
+  return `${colors[color]} ${textSizes[size]}`;
+};
+
+//HTML
+<h1 className={isImpotant ? coloredText(red, lg) : coloredText(black, sm)}>
+  This is Title
+</h1>;
+```
+
+이런 식으로 변수와 함수를 만들어 필요에 따라 조합하여 사용할 수 있다.
+
+### 4. 컴포넌트화 하여 사용하기
+
+```jsx
+// Script
+const colors = {
+  red: "text-red-600",
+  black: "text-black",
+};
+
+const textSizes = {
+  sm: "text-sm",
+  md: "text-md",
+  lg: "text-lg",
+};
+
+const Button = ({ color, size, children }) => {
+  let textColor = colors[color];
+  let textSize = textSizes[size];
+
+  return <button className={`${textColor} ${textSize}`}>{children}</button>;
+};
+export default Button;
+```
+
+3번과 유사한 로직으로써, props를 활용하여 컴포넌트를 만들어 사용할 수 있다.
 
 참고: [Tailwind CSS 공식문서](https://tailwindcss.com/docs/installation){:target="\_blank"}
