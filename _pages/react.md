@@ -1,6 +1,6 @@
 ---
 title: React
 layout: category
-permalink: /categories/react/
+permalink: /categories/react
 taxonomy: React
 ---

@@ -19,7 +19,7 @@ docs:
   - title: Category
     children:
       - title: "All"
-        url: /categories
+        url: /categories/all
       - title: "Concept"
         url: /categories/concept
       - title: "HTML"

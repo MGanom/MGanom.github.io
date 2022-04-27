@@ -1,6 +1,6 @@
 ---
 title: TypeScript
 layout: category
-permalink: /categories/typescript/
+permalink: /categories/typescript
 taxonomy: TypeScript
 ---

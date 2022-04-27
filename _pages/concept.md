@@ -1,6 +1,6 @@
 ---
 title: Concept
 layout: category
-permalink: /categories/concept/
+permalink: /categories/concept
 taxonomy: Concept
 ---

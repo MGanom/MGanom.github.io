@@ -1,6 +1,6 @@
 ---
 title: HTML
 layout: category
-permalink: /categories/html/
+permalink: /categories/html
 taxonomy: HTML
 ---

@@ -120,7 +120,7 @@
   /* next/previous buttons */
   &--pager {
     display: block;
-    padding: 1em 2em;
+    padding: 0.25em;
     float: left;
     width: 50%;
     font-family: $sans-serif;
@@ -440,9 +440,26 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.2em;
+
+  @media (max-width: 1023px) {
+    ul {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 5em;
+    }
+  }
+  @media (max-width: 599px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2em;
+    }
+  }
 
   a {
+    display: flex;
+    justify-content: space-between;
     color: inherit;
 
     &:hover {
@@ -450,10 +467,12 @@
     }
   }
 
+  .nav__title__all {
+    font-size: 1.3em;
+  }
+
   .active {
-    margin-left: -0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    text-shadow: 0 0 3px $base0c;
     font-weight: bold;
   }
 
@@ -552,6 +571,7 @@
 
     &:hover {
       color: $text-color;
+      background-color: $base0c;
     }
   }
 
