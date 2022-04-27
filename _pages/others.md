@@ -1,6 +1,6 @@
 ---
 title: Others
 layout: category
-permalink: /categories/others/
+permalink: /categories/others
 taxonomy: Others
 ---

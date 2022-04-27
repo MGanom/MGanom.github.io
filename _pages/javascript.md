@@ -1,6 +1,6 @@
 ---
 title: JavaScript
 layout: category
-permalink: /categories/javascript/
+permalink: /categories/javascript
 taxonomy: JavaScript
 ---

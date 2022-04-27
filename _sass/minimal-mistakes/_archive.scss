@@ -9,12 +9,12 @@
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    // padding-right: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    // padding-right: $right-sidebar-width;
   }
 }
 
@@ -221,6 +221,10 @@
     font-size: $type-size-5;
     a {
       white-space: pre-wrap;
+    }
+
+    &:hover {
+      text-shadow: 0 0 3px $base0c;
     }
   }
 

@@ -1,6 +1,6 @@
 ---
 title: GraphQL
 layout: category
-permalink: /categories/graphql/
+permalink: /categories/graphql
 taxonomy: GraphQL
 ---
