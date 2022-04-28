@@ -40,6 +40,8 @@ docs:
         url: /categories/node-js
       - title: "GraphQL"
         url: /categories/graphql
+      - title: "SWR"
+        url: /categories/swr
       - title: "Algorithm"
         url: /categories/algorithm
       - title: "Others"
