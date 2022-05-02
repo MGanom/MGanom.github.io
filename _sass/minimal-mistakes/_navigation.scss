@@ -442,6 +442,11 @@
   margin: 0;
   font-size: 1.2em;
 
+  ul {
+    li {
+      line-height: 1.7;
+    }
+  }
   @media (max-width: 1023px) {
     ul {
       display: grid;
@@ -458,22 +463,16 @@
   }
 
   a {
-    display: flex;
-    justify-content: space-between;
     color: inherit;
 
     &:hover {
       text-shadow: 0 0 3px $base0c;
     }
-  }
 
-  .nav__title__all {
-    font-size: 1.3em;
-  }
-
-  .active {
-    text-shadow: 0 0 3px $base0c;
-    font-weight: bold;
+    .item__count {
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
   }
 
   @include breakpoint(max-width $large - 1px) {
@@ -555,10 +554,10 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 
   @include breakpoint($large) {
-    font-size: $type-size-7;
+    font-size: $type-size-6;
   }
 
   a {

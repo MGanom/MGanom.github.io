@@ -22,28 +22,19 @@ site.posts.size %}
       <ul>
         {% for child in nav.children %} {% if child.title == "All" %}
         <li>
-          <a class="nav__title__all" href="{{ child.url | relative_url }}"
-            ><span>{{ child.title }}</span
-            ><span>({{ count }})</span></a
+          <a href="{{ child.url | relative_url }}"
+            >{{ child.title
+            }}<span class="item__count">&nbsp;&nbsp;({{ count }})</span></a
           >
         </li>
         {% else %} {% for category in site.categories %} {% if child.title ==
         category[0] %}
         <li>
-          <a
-            href="{{ child.url | relative_url }}"
-            {%
-            if
-            page.url
-            contains
-            child.title
-            %}
-            class="active"
-            {%
-            endif
-            %}
-            ><span>{{ child.title }}</span
-            ><span>({{ category[1].size }})</span></a
+          <a href="{{ child.url | relative_url }}"
+            >{{ child.title
+            }}<span class="item__count"
+              >&nbsp;&nbsp;({{ category[1].size }})</span
+            ></a
           >
         </li>
         {% endif %} {% endfor %} {% endif %} {% endfor %}
