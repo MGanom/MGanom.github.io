@@ -75,3 +75,9 @@ function Counter() {
 기본적인 모양과 사용 방법은 `useState()`와 유사하며, `useRecoilState(atom)`을 사용해준다는 점만 다르다. 이렇게 atom을 사용하는 순간 이 컴포넌트는 해당 atom에 구독이 되며, 해당 atom이 업데이트되면 컴포넌트 또한 재렌더가 이루어진다.
 
 만약 `counterState`가 여러 컴포넌트에서 사용된다면 이 atom이 업데이트될 시 구독 중인 모든 컴포넌트가 재렌더 된다.
+
+### Selector
+
+이에 대해선 더 공부한 후 다음 글에서 다루도록 하겠다.
+
+참고: [Recoil 공식 문서](https://recoiljs.org/ko/docs/introduction/core-concepts){:target="\_blank"}
