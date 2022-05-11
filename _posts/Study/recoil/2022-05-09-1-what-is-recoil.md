@@ -1,6 +1,7 @@
 ---
 title: "[Recoil] Recoil의 개념 - (1)"
 categories: Recoil
+last_modified_at: 2022-05-11
 ---
 
 ## Recoil(리코일)이란?
@@ -78,6 +79,31 @@ function Counter() {
 
 ### Selector
 
-이에 대해선 더 공부한 후 다음 글에서 다루도록 하겠다.
+Selector는 atom으로부터 파생된 상태를 나타낸다. 이는 항상 동일한 값을 반환하는 부작용이 없는 "순수함수"이다.
+
+```jsx
+const counterState = atom({
+  key: "counterState",
+  default: 0,
+});
+
+const doubleCounterState = selector({
+  key: "counterSelector",
+  get: ({ get }) => {
+    get(counterState);
+  },
+  set: ({ set }, newValue) => {
+    set(
+      counterState,
+      newValue instanceof DefaultValue ? newValue : newValue + 1
+    );
+  },
+});
+
+const [doubleCounter, setDoubleCounter] = useRecoilState(doubleCounterState);
+setDoubleCounter((prev) => prev + 1); // 2씩 증가
+```
+
+만약 `set`이 없다면 값을 불러오기만 할 수 있다.
 
 참고: [Recoil 공식 문서](https://recoiljs.org/ko/docs/introduction/core-concepts){:target="\_blank"}
