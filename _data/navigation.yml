@@ -42,6 +42,8 @@ docs:
         url: /categories/graphql
       - title: "SWR"
         url: /categories/swr
+      - title: "React_Redux"
+        url: /categories/react-redux
       - title: "Algorithm"
         url: /categories/algorithm
       - title: "Others"
