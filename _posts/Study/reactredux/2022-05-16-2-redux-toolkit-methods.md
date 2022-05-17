@@ -184,6 +184,8 @@ export const { increment, decrement } = counterSlice.actions
 export default counterSlice.reducer
 ```
 
+사용하고 싶은 액션을 export하고 그대로 사용하면 된다. 이 경우 `increment`와 `decrement`이다.
+
 #### name
 
 ```jsx
