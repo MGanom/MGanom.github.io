@@ -463,13 +463,21 @@
   }
 
   a {
+    display: flex;
+    align-items: center;
     color: inherit;
 
     &:hover {
       text-shadow: 0 0 3px $base0c;
     }
 
+    .item__name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .item__count {
+      flex: 1;
       font-size: 0.9em;
       opacity: 0.6;
     }

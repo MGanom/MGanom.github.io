@@ -24,16 +24,16 @@ site.posts.size %}
         <li>
           <a href="{{ child.url | relative_url }}"
             >{{ child.title
-            }}<span class="item__count">&nbsp;&nbsp;({{ count }})</span></a
+            }}<span class="item__count">&nbsp;·&nbsp;({{ count }})</span></a
           >
         </li>
         {% else %} {% for category in site.categories %} {% if child.title ==
         category[0] %}
         <li>
           <a href="{{ child.url | relative_url }}"
-            >{{ child.title
-            }}<span class="item__count"
-              >&nbsp;&nbsp;({{ category[1].size }})</span
+            ><span class="item__name">{{ child.title }}</span
+            ><span class="item__count"
+              >&nbsp;·&nbsp;({{ category[1].size }})</span
             ></a
           >
         </li>
