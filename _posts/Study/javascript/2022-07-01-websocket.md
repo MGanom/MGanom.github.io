@@ -118,4 +118,4 @@ socket.onerror = (error) => {
 };
 ```
 
-참고: [MDN - WebSocekt](https://developer.mozilla.org/ko/docs/Web/API/WebSocket){:target="\_blank"}
+참고: [MDN - WebSocket](https://developer.mozilla.org/ko/docs/Web/API/WebSocket){:target="\_blank"}
