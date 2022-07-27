@@ -1,11 +1,12 @@
 ---
 title: "[React] Virtual DOM(가상 DOM)"
 categories: React
+last_modified_at: 2022-07-27
 ---
 
-※ 가상 DOM을 이해하기 위해선 우선 [DOM](https://moon-ga.github.io/html/dom/){:target="\_blank"}에 대해 알아야 한다.
-
 ## Virtual DOM (가상 DOM)이란?
+
+※ 가상 DOM을 이해하기 위해선 우선 [DOM](https://moon-ga.github.io/html/dom/){:target="\_blank"}에 대해 알아야 한다.
 
 가상 DOM이란 말 그대로 가상 Document Object Model, 즉 가상 문서 객체 모델을 의미한다.  
 일반적으로 존재하는 DOM과는 별개로 React에서는 실제 DOM과 똑같은 구조의 DOM을 생성하여 이를 활용한다.
@@ -16,7 +17,7 @@ categories: React
 2. 가상 DOM을 렌더한다.
 3. 실제 DOM에 변화를 줄 행동이 감지되면 이를 가상 DOM에 먼저 업데이트 한다.
 4. 변화에 따른 가상 DOM을 리렌더한다.
-5. 변화가 반영 되지 않은 실제 DOM과 변화가 반영 된 가상 DOM을 비교한다.
+5. 변화가 반영 되지 않은 가상 DOM과 변화가 반영 된 가상 DOM을 비교한다.
 6. 두 DOM 간에 다른 부분을 감지하여 달라진 부분만 실제 DOM에 반영한다.
 7. 변화가 발생한 부분만 리렌더한다.
 
