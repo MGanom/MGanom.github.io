@@ -12,7 +12,7 @@ document.show_date %}
       >{{ document.last_modified_at | date: date_format }}</time
     >
   </span>
-  {% else %}
+  / {% endif %}
   <span class="page__meta-date">
     <i
       class="far {% if include.type == 'grid' and document.read_time and document.show_date %}fa-fw {% endif %}fa-calendar-alt"
@@ -23,11 +23,12 @@ document.show_date %}
       >{{ document.date | date: date_format }}</time
     >
   </span>
-  {% endif %} {% endif %} {% if document.read_time and document.show_date
-  %}<span class="page__meta-sep"></span>{% endif %} {% if document.read_time %}
-  {% assign words_per_minute = document.words_per_minute | default:
-  site.words_per_minute | default: 200 %} {% assign words = document.content |
-  strip_html | number_of_words %}
+  {% endif %} {% if document.read_time and document.show_date %}<span
+    class="page__meta-sep"
+  ></span
+  >{% endif %} {% if document.read_time %} {% assign words_per_minute =
+  document.words_per_minute | default: site.words_per_minute | default: 200 %}
+  {% assign words = document.content | strip_html | number_of_words %}
 
   <span class="page__meta-readtime">
     <i
