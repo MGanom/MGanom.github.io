@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://moon-ga.github.io/sitemap.xml
