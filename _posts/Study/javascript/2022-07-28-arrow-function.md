@@ -12,7 +12,7 @@ function add1(x, y) {
   return x + y;
 }
 
-const add2 = (x, y) => x + y;
+const add2 = (x, y) => x + y; // 중괄호와 return 생략
 
 const add3 = (x, y) => {
   return x + y;
@@ -23,16 +23,16 @@ add2(5, 7); // 12
 add3(2, 3); // 5
 ```
 
-예시에 있는 함수들은 모두 같은 작동을 한다. 예시에서 볼 수 있듯이, 화살표 함수는 실행문이 한 줄의 `return`으로만 이루어져 있다면 중괄호와 `return`을 생략할 수 있다.
+예시에 있는 함수들은 모두 같은 작동을 한다. 예시의 `add2`에서 볼 수 있듯이, 화살표 함수는 실행문이 한 줄의 `return`으로만 이루어져 있다면 중괄호와 `return`을 생략할 수 있다.
 
-단, 객체를 반환하는 상황에서 중괄호와 `return`을 생략하려면 중괄호의 역할이 구분이 가능하도록 대괄호를 사용해줘야 한다.
+단, 객체를 반환하는 상황에서 중괄호와 `return`을 생략하려면 중괄호의 역할이 구분이 가능하도록 소괄호를 사용해줘야 한다.
 
 ```js
 function calculator1(x, y) {
   return { add: x + y, sub: x - y };
 }
 
-const calculator2 = (x, y) => ({ add: x + y, sub: x - y });
+const calculator2 = (x, y) => ({ add: x + y, sub: x - y }); // 소괄호로 객체임을 구분
 
 calculator1(1, 2).add; // 3
 calculator1(1, 2).sub; // -1
